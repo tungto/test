@@ -1,4 +1,4 @@
-// fetch('../test/pages/components/cart.html')
+// fetch('/test/pages/components/cart.html')
 //   .then((response) => response.text())
 //   .then((html) => {
 //     console.log(html)
