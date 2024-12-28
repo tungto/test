@@ -1,0 +1,1534 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Augri</title>
+      <link
+         href="https://fonts.googleapis.com/css2?family=Karla"
+         rel="stylesheet"
+         />
+     <script type="module" crossorigin src="./assets/index-BVySn6aG.js"></script>
+     <link rel="stylesheet" crossorigin href="./assets/index-Z91aHRTq.css">
+   </head>
+   <div
+   class="popup-screen d-flex flex-row-reverse overflow-auto cart-container"
+   id="popup-screen"
+   style="display: none"
+ >
+   <div class="popup-box pt-5 px-5 d-flex flex-column">
+     <div class="d-flex row align-items-center">
+       <div class="col cart-heading">My cart (02)</div>
+       <div class="col text-end close-btn" id="close-cart">&times;</div>
+     </div>
+     <div class="cart-item">
+       <div class="row my-3">
+         <div class="col-auto">
+           <div>
+             <img
+               src="./assets/bag-prd2-Ch2Op1Zt.png"
+               alt="Product image"
+               class="thankyou-preview-item-img"
+             />
+           </div>
+         </div>
+         <div class="col d-flex flex-column justify-content-between">
+           <div class="row">
+             <div class="col form-header-text text-start">Diamond Ring</div>
+             <div class="col text-end form-header-text">$100</div>
+             <div class="mt-3 regular-text text-start">
+               Size: S | Color: Blue
+             </div>
+             <div class="mt-2 regular-text text-start">Quantity: 1</div>
+           </div>
+           <div class="row">
+             <div class="col">
+               <div class="d-inline-flex quanity-box align-items-center px-3">
+                 <div class="ico minus pe-2 text-center">&minus;</div>
+                 <input type="text" class="quantity-input" />
+                 <div class="ico plus ps-2 text-center">&plus;</div>
+               </div>
+             </div>
+             <div class="col d-flex justify-content-end align-items-end">
+               <div class="row" id="rm-btn">
+                 <p class="col-auto mb-0">Remove</p>
+                 <p class="col-auto mb-0 ps-0 close-btn">&times;</p>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+       <hr />
+     </div>
+     <div class="cart-item">
+       <div class="row my-3">
+         <div class="col-auto">
+           <div>
+             <img
+               src="./assets/bag-prd2-Ch2Op1Zt.png"
+               alt="Product image"
+               class="thankyou-preview-item-img"
+             />
+           </div>
+         </div>
+         <div class="col d-flex flex-column justify-content-between">
+           <div class="row">
+             <div class="col form-header-text text-start">Diamond Ring</div>
+             <div class="col text-end form-header-text">$100</div>
+             <div class="mt-3 regular-text text-start">
+               Size: S | Color: Blue
+             </div>
+             <div class="mt-2 regular-text text-start">Quantity: 1</div>
+           </div>
+           <div class="row">
+             <div class="col">
+               <div class="d-inline-flex quanity-box align-items-center px-3">
+                 <div class="ico minus pe-2 text-center">&minus;</div>
+                 <input type="text" class="quantity-input" />
+                 <div class="ico plus ps-2 text-center">&plus;</div>
+               </div>
+             </div>
+             <div class="col d-flex justify-content-end align-items-end">
+               <div class="row" id="rm-btn">
+                 <p class="col-auto mb-0">Remove</p>
+                 <p class="col-auto mb-0 ps-0 close-btn">&times;</p>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+       <hr />
+     </div>
+     <div class="my-4" id="cart-notes">
+       <textarea
+         class="form-control"
+         id="exampleFormControlTextarea1"
+         placeholder="Please note any special requests for your order."
+       ></textarea>
+     </div>
+     <div class="mt-auto mb-4" id="cart-total">
+       <div class="cart-total-container">
+         <div class="cart-heading">Total: $15.600</div>
+         <div class="total-desc mt-2">
+           Shipping & taxes calculated at checkout
+         </div>
+         <div id="paynow" class="mt-4">
+           <a
+             class="btn d-flex align-items-center justify-content-center"
+             id="btn-pay"
+             href="./pages/checkout.html"
+             >Checkout</a
+           >
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ 
+   <body class="content-wrapper">
+      <header class="section top-page container">
+         <div class="header card-header border-0">
+            <div class="row header-inner">
+               <!--top-page-left-->
+               <div class="col-4">
+                  <ul class="d-flex justify-content-start">
+                     <li class="py-1">
+                        <a href="https://www.facebook.com/aguri-jewellery">
+                        <img class="ps-2 pe-2" src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_0_2223)'%3e%3cpath%20d='M12%200C5.3868%200%200%205.3868%200%2012C0%2018.6132%205.3868%2024%2012%2024C18.6132%2024%2024%2018.6132%2024%2012C24%205.3868%2018.6132%200%2012%200ZM12%202.4C17.3161%202.4%2021.6%206.68385%2021.6%2012C21.6%2016.8174%2018.0784%2020.7756%2013.4625%2021.4781V14.8617H16.2563L16.6945%2012.0234H13.4625V10.4719C13.4625%209.29227%2013.8468%208.24531%2014.9508%208.24531H16.7227V5.76797C16.4107%205.72597%2015.7522%205.63438%2014.5078%205.63438C11.9086%205.63438%2010.3852%207.00717%2010.3852%2010.1344V12.0234H7.71328V14.8617H10.3852V21.4547C5.84435%2020.689%202.4%2016.7643%202.4%2012C2.4%206.68385%206.68385%202.4%2012%202.4Z'%20fill='%23333333'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_0_2223'%3e%3crect%20width='24'%20height='24'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e">
+                        </a>
+                     </li>
+                     <li class="py-1 px-3">
+                        <a href="https://www.instagram.com/aguri-jewellery">
+                        <img class="ps-2 pe-2" src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M12%200C8.7435%200%208.334%200.015%207.0545%200.072C5.775%200.132%204.9035%200.333%204.14%200.63C3.33914%200.931229%202.61374%201.40374%202.0145%202.0145C1.40411%202.61404%200.931661%203.33936%200.63%204.14C0.333%204.902%200.1305%205.775%200.072%207.05C0.015%208.3325%200%208.7405%200%2012.0015C0%2015.2595%200.015%2015.6675%200.072%2016.947C0.132%2018.225%200.333%2019.0965%200.63%2019.86C0.9375%2020.649%201.347%2021.318%202.0145%2021.9855C2.6805%2022.653%203.3495%2023.064%204.1385%2023.37C4.9035%2023.667%205.7735%2023.8695%207.0515%2023.928C8.3325%2023.985%208.7405%2024%2012%2024C15.2595%2024%2015.666%2023.985%2016.947%2023.928C18.2235%2023.868%2019.098%2023.667%2019.8615%2023.37C20.6618%2023.0686%2021.3867%2022.5961%2021.9855%2021.9855C22.653%2021.318%2023.0625%2020.649%2023.37%2019.86C23.6655%2019.0965%2023.868%2018.225%2023.928%2016.947C23.985%2015.6675%2024%2015.2595%2024%2012C24%208.7405%2023.985%208.3325%2023.928%207.0515C23.868%205.775%2023.6655%204.902%2023.37%204.14C23.0684%203.33934%2022.5959%202.61401%2021.9855%202.0145C21.3864%201.40351%2020.661%200.930968%2019.86%200.63C19.095%200.333%2018.222%200.1305%2016.9455%200.072C15.6645%200.015%2015.258%200%2011.997%200H12.0015H12ZM10.9245%202.163H12.0015C15.2055%202.163%2015.585%202.1735%2016.8495%202.232C18.0195%202.2845%2018.6555%202.481%2019.0785%202.6445C19.638%202.862%2020.0385%203.123%2020.4585%203.543C20.8785%203.963%2021.138%204.362%2021.3555%204.923C21.5205%205.3445%2021.7155%205.9805%2021.768%207.1505C21.8265%208.415%2021.8385%208.7945%2021.8385%2011.997C21.8385%2015.1995%2021.8265%2015.5805%2021.768%2016.845C21.7155%2018.015%2021.519%2018.6495%2021.3555%2019.0725C21.1631%2019.5935%2020.856%2020.0647%2020.457%2020.451C20.037%2020.871%2019.638%2021.1305%2019.077%2021.348C18.657%2021.513%2018.021%2021.708%2016.8495%2021.762C15.585%2021.819%2015.2055%2021.8325%2012.0015%2021.8325C8.7975%2021.8325%208.4165%2021.819%207.152%2021.762C5.982%2021.708%205.3475%2021.513%204.9245%2021.348C4.40325%2021.1559%203.93169%2020.8494%203.5445%2020.451C3.14513%2020.0641%202.83758%2019.5925%202.6445%2019.071C2.481%2018.6495%202.2845%2018.0135%202.232%2016.8435C2.175%2015.579%202.163%2015.1995%202.163%2011.994C2.163%208.79%202.175%208.412%202.232%207.1475C2.286%205.9775%202.481%205.3415%202.646%204.9185C2.8635%204.359%203.1245%203.9585%203.5445%203.5385C3.9645%203.1185%204.3635%202.859%204.9245%202.6415C5.3475%202.4765%205.982%202.2815%207.152%202.2275C8.259%202.1765%208.688%202.1615%2010.9245%202.16V2.163ZM18.4065%204.155C18.2174%204.155%2018.0301%204.19225%2017.8554%204.26461C17.6807%204.33698%2017.522%204.44305%2017.3883%204.57677C17.2545%204.71048%2017.1485%204.86923%2017.0761%205.04394C17.0037%205.21864%2016.9665%205.4059%2016.9665%205.595C16.9665%205.7841%2017.0037%205.97135%2017.0761%206.14606C17.1485%206.32077%2017.2545%206.47952%2017.3883%206.61323C17.522%206.74695%2017.6807%206.85302%2017.8554%206.92539C18.0301%206.99775%2018.2174%207.035%2018.4065%207.035C18.7884%207.035%2019.1547%206.88329%2019.4247%206.61323C19.6948%206.34318%2019.8465%205.97691%2019.8465%205.595C19.8465%205.21309%2019.6948%204.84682%2019.4247%204.57677C19.1547%204.30671%2018.7884%204.155%2018.4065%204.155ZM12.0015%205.838C11.1841%205.82525%2010.3723%205.97523%209.61347%206.27921C8.85459%206.58319%208.16377%207.03511%207.58123%207.60863C6.99868%208.18216%206.53605%208.86585%206.22026%209.61989C5.90448%2010.3739%205.74185%2011.1833%205.74185%2012.0007C5.74185%2012.8182%205.90448%2013.6276%206.22026%2014.3816C6.53605%2015.1356%206.99868%2015.8193%207.58123%2016.3929C8.16377%2016.9664%208.85459%2017.4183%209.61347%2017.7223C10.3723%2018.0263%2011.1841%2018.1763%2012.0015%2018.1635C13.6193%2018.1383%2015.1623%2017.4779%2016.2975%2016.3249C17.4326%2015.1719%2018.0689%2013.6188%2018.0689%2012.0007C18.0689%2010.3827%2017.4326%208.82962%2016.2975%207.67662C15.1623%206.52363%2013.6193%205.86324%2012.0015%205.838ZM12.0015%207.9995C13.0625%207.9995%2014.08%208.42098%2014.8303%209.17122C15.5805%209.92146%2016.002%2010.939%2016.002%2012C16.002%2013.061%2015.5805%2014.0785%2014.8303%2014.8288C14.08%2015.579%2013.0625%2016.0005%2012.0015%2016.0005C10.9405%2016.0005%209.92296%2015.579%209.17272%2014.8288C8.42248%2014.0785%208.001%2013.061%208.001%2012C8.001%2010.939%208.42248%209.92146%209.17272%209.17122C9.92296%208.42098%2010.9405%207.9995%2012.0015%207.9995Z'%20fill='%23333333'/%3e%3c/svg%3e">
+                        </a>
+                     </li>
+                     <li class="py-1">
+                        <a href="https://www.pinterest.com/aguri-jewellery">
+                        <img class="ps-2 pe-2" src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M12.5625%200.304688C7.75313%200.304688%203%203.51094%203%208.7C3%2012%204.85625%2013.875%205.98125%2013.875C6.44531%2013.875%206.7125%2012.5813%206.7125%2012.2156C6.7125%2011.7797%205.60156%2010.8516%205.60156%209.0375C5.60156%205.26875%208.47031%202.59688%2012.1828%202.59688C15.375%202.59688%2017.7375%204.41094%2017.7375%207.74375C17.7375%2010.2328%2016.7391%2014.9016%2013.5047%2014.9016C12.3375%2014.9016%2011.3391%2014.0578%2011.3391%2012.8484C11.3391%2011.0766%2012.5766%209.36094%2012.5766%207.53281C12.5766%204.42969%208.175%204.99219%208.175%208.74219C8.175%209.52969%208.27344%2010.4016%208.625%2011.1188C7.97813%2013.9031%206.65625%2018.0516%206.65625%2020.9203C6.65625%2021.8063%206.78281%2022.6781%206.86719%2023.5641C7.02656%2023.7422%206.94688%2023.7234%207.19063%2023.6344C9.55313%2020.4%209.46875%2019.7672%2010.5375%2015.5344C11.1141%2016.6313%2012.6047%2017.2219%2013.7859%2017.2219C18.7641%2017.2219%2021%2012.3703%2021%207.99688C21%203.34219%2016.9781%200.304688%2012.5625%200.304688Z'%20fill='black'/%3e%3c/svg%3e">
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <!--logo-->
+               <div class="col-4 d-flex justify-content-center">
+                  <a href="/">
+                  <img id="logo" src="./assets/main-logo-Bn30nkrS.svg" alt="aguri-logo" />
+                  </a>
+               </div>
+               <!--top-page-right-->
+               <div class="col-4">
+                  <ul class="d-flex justify-content-end">
+                     <li class="py-1">
+                        <!--Modal Sign In Button-->
+                        <div class="sign-in" data-bs-toggle="modal" type="button" data-bs-target="#sign-in">
+                           Sign in
+                        </div>
+                     </li>
+                     <li class="py-1 px-3">
+                        <a href="../../pages/search-found.html"><img class="ps-2 pe-2" src="data:image/svg+xml,%3csvg%20width='24'%20height='25'%20viewBox='0%200%2024%2025'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11%2019.5C15.4183%2019.5%2019%2015.9183%2019%2011.5C19%207.08172%2015.4183%203.5%2011%203.5C6.58172%203.5%203%207.08172%203%2011.5C3%2015.9183%206.58172%2019.5%2011%2019.5Z'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M21.0004%2021.4999L16.6504%2017.1499'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" (click)="search()"></a>
+                     </li>
+                     <li class="py-1">
+                        <img class="ps-2 pe-2" id="toggle-cart" src="data:image/svg+xml,%3csvg%20width='24'%20height='25'%20viewBox='0%200%2024%2025'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_0_2214)'%3e%3cpath%20d='M0%202.75C0%202.55109%200.0790176%202.36032%200.21967%202.21967C0.360322%202.07902%200.551088%202%200.75%202H3C3.1673%202.00005%203.32977%202.05603%203.4616%202.15904C3.59342%202.26205%203.68701%202.40618%203.7275%202.5685L4.335%205H21.75C21.8601%205.0001%2021.9689%205.02445%2022.0685%205.07133C22.1682%205.1182%2022.2563%205.18644%2022.3266%205.27121C22.3969%205.35597%2022.4477%205.45518%2022.4753%205.56178C22.5029%205.66838%2022.5068%205.77976%2022.4865%205.888L20.2365%2017.888C20.2043%2018.0599%2020.1131%2018.2151%2019.9786%2018.3268C19.8442%2018.4386%2019.6749%2018.4998%2019.5%2018.5H6C5.82515%2018.4998%205.65585%2018.4386%205.52137%2018.3268C5.38688%2018.2151%205.29567%2018.0599%205.2635%2017.888L3.015%205.9105L2.415%203.5H0.75C0.551088%203.5%200.360322%203.42098%200.21967%203.28033C0.0790176%203.13968%200%202.94891%200%202.75ZM4.653%206.5L6.6225%2017H18.8775L20.847%206.5H4.653ZM7.5%2018.5C6.70435%2018.5%205.94129%2018.8161%205.37868%2019.3787C4.81607%2019.9413%204.5%2020.7044%204.5%2021.5C4.5%2022.2956%204.81607%2023.0587%205.37868%2023.6213C5.94129%2024.1839%206.70435%2024.5%207.5%2024.5C8.29565%2024.5%209.05871%2024.1839%209.62132%2023.6213C10.1839%2023.0587%2010.5%2022.2956%2010.5%2021.5C10.5%2020.7044%2010.1839%2019.9413%209.62132%2019.3787C9.05871%2018.8161%208.29565%2018.5%207.5%2018.5ZM18%2018.5C17.2043%2018.5%2016.4413%2018.8161%2015.8787%2019.3787C15.3161%2019.9413%2015%2020.7044%2015%2021.5C15%2022.2956%2015.3161%2023.0587%2015.8787%2023.6213C16.4413%2024.1839%2017.2043%2024.5%2018%2024.5C18.7956%2024.5%2019.5587%2024.1839%2020.1213%2023.6213C20.6839%2023.0587%2021%2022.2956%2021%2021.5C21%2020.7044%2020.6839%2019.9413%2020.1213%2019.3787C19.5587%2018.8161%2018.7956%2018.5%2018%2018.5ZM7.5%2020C7.89782%2020%208.27936%2020.158%208.56066%2020.4393C8.84196%2020.7206%209%2021.1022%209%2021.5C9%2021.8978%208.84196%2022.2794%208.56066%2022.5607C8.27936%2022.842%207.89782%2023%207.5%2023C7.10217%2023%206.72064%2022.842%206.43934%2022.5607C6.15804%2022.2794%206%2021.8978%206%2021.5C6%2021.1022%206.15804%2020.7206%206.43934%2020.4393C6.72064%2020.158%207.10217%2020%207.5%2020ZM18%2020C18.3978%2020%2018.7794%2020.158%2019.0607%2020.4393C19.342%2020.7206%2019.5%2021.1022%2019.5%2021.5C19.5%2021.8978%2019.342%2022.2794%2019.0607%2022.5607C18.7794%2022.842%2018.3978%2023%2018%2023C17.6022%2023%2017.2206%2022.842%2016.9393%2022.5607C16.658%2022.2794%2016.5%2021.8978%2016.5%2021.5C16.5%2021.1022%2016.658%2020.7206%2016.9393%2020.4393C17.2206%2020.158%2017.6022%2020%2018%2020Z'%20fill='black'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_0_2214'%3e%3crect%20width='24'%20height='24'%20fill='white'%20transform='translate(0%200.5)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e">
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!--NAVBAR-->
+      <nav class="section header navbar-container">
+         <div class="container navbar-here border-0">
+            <ul class="nav justify-content-center">
+               <li><a href="/">Home</a></li>
+               <!-- <li>
+                  <a href="/pages/shop-all.html">Shop All</a>
+                  
+                  </li> -->
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="/pages/shop-all.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Shop All
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                     <a class="dropdown-item" href="/pages/rings.html">Rings</a>
+                     <a class="dropdown-item" href="/pages/necklaces.html">Necklaces</a>
+                     <a class="dropdown-item" href="/pages/necklaces.html">Bracelets</a>
+                     <a class="dropdown-item" href="/pages/necklaces.html">Earrings</a>
+                  </div>
+               </li>
+               <li class="nav-item nav-test">
+                  <a href="/pages/jew-care.html">Jewellery Guide</a>
+               </li>
+               <li><a href="/pages/about-us.html">About us</a></li>
+               <li><a href="/pages/contact-us.html">Contact</a></li>
+            </ul>
+         </div>
+         <hr class="my-4">
+      </nav>
+      </div>
+      <!-- Modal Sign in-->
+      <div class="modal fade" id="sign-in">
+         <div class="modal-dialog modal-dialog-centered first-steps">
+            <div class="modal-content first-steps-inner">
+               <h5 class="modal-title mb-4 text-center">Welcome to AGURI!</h5>
+               <form
+                  ngNativeValidate
+                  onsubmit="alert('Welcome back!! Hope you have a pleasant shopping experience with us.')"
+                  >
+                  <div class="mb-3">
+                     <label for="email">Email address</label>
+                     <input class="inpu" type="text" name="email" required />
+                  </div>
+                  <div>
+                     <label for="psw">Password</label>
+                     <input class="inpu" type="password" name="psw" required />
+                  </div>
+                  <button type="submit" class="btn btn-pri my-4 w-100">Sign in</button>
+                  <div class="d-flex sign-in-content">
+                     <div class="signin-inner">
+                        <a
+                           class="forgot-pass smt me-5"
+                           data-bs-toggle="modal"
+                           type="submit"
+                           data-bs-target="#forgot-pass"
+                           >Forgot password?</a
+                           >
+                        <span class="smt"
+                           >New member?<a
+                           class="sign-up smt"
+                           data-bs-toggle="modal"
+                           type="button"
+                           data-bs-target="#sign-up"
+                           >&nbsp;&nbsp;Sign up</a
+                           ></span
+                           >
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <!-- Modal Forgot Password-->
+      <div class="modal fade" id="forgot-pass">
+         <div class="modal-dialog modal-dialog-centered first-steps">
+            <div class="modal-content first-steps-inner">
+               <h5 class="modal-title mb-4 text-center">Forgot your password?</h5>
+               <!--name="myFormBottom" onsubmit="return validateFormBottom()"-->
+               <form
+                  ngNativeValidate
+                  onsubmit="alert('Your password was successfully changed.')"
+                  >
+                  <label for="email">Email address</label>
+                  <input class="inpu" type="text" name="email" required />
+                  <button type="submit" class="btn btn-pri my-4 w-100">
+                  Reset Password
+                  </button>
+                  <div class="text-center">
+                     <a
+                        class="smt"
+                        data-bs-toggle="modal"
+                        type="submit"
+                        data-bs-target="#sign-in"
+                        >Back to Sign in</a
+                        >
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <!-- Modal Sign up-->
+      <div class="modal fade" id="sign-up">
+         <div class="modal-dialog modal-dialog-centered first-steps">
+            <div class="modal-content first-steps-inner">
+               <h5 class="modal-title mb-4 text-center">Hello, Friend!</h5>
+               <form
+                  ngNativeValidate
+                  onsubmit="alert('Thank you for signing up!! Hope you have a pleasant shopping experience with us.')"
+                  >
+                  <div class="row">
+                     <div class="col-6 ps-0">
+                        <label>First name</label>
+                        <input name="aaa" class="inpu" type="text" required /><br />
+                     </div>
+                     <div class="col-6 pe-0">
+                        <label>Last name</label>
+                        <input class="inpu" type="text" required /><br />
+                     </div>
+                  </div>
+                  <div class="my-3 row ">
+                     <label for="email">Email address</label>
+                     <input class="inpu" type="text" name="email" id="email" required />
+                  </div>
+                  <div class="row">
+                     <label for="psw">Create Password</label>
+                     <input class="inpu" type="password" name="psw" id="psw" required />
+                  </div>
+                  <div class="my-3 row">
+                     <label for="psw-repeat">Re-type Password</label>
+                     <input
+                        class="inpu"
+                        type="password"
+                        name="psw-repeat"
+                        id="psw-repeat"
+                        required
+                        />
+                  </div>
+                  <button type="submit" class="registerbtn signin btn btn-pri my-4 w-100">
+                  Sign up
+                  </button>
+                  <div class="d-flex sign-in-content w-100">
+                     <div class="signin-inner">
+                        <span class="smt"
+                           >Already have an account?
+                        <a
+                           class="sign-in smt"
+                           data-bs-toggle="modal"
+                           type="button"
+                           data-bs-target="#sign-in"
+                           >&nbsp;&nbsp;Sign in</a
+                           ></span
+                           >
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <!-- 1 -->
+      <!-- hero -->
+      <div _ngcontent-ttn-c9="" class="ctg">
+         <div _ngcontent-ttn-c9="" class="row ctg-inner">
+            <div _ngcontent-ttn-c9="" class="ctg-left col-8">
+               <div _ngcontent-ttn-c9="" class="ctg-left-top">
+                  <div _ngcontent-ttn-c9="" class="d-flex">
+                     <div _ngcontent-ttn-c9="" class="left-top">
+                        <div _ngcontent-ttn-c9="" class="ctg-img-inner">
+                           <div _ngcontent-ttn-c9="" class="image-ctg">
+                              <a _ngcontent-ttn-c9=""
+                                 ><img _ngcontent-ttn-c9="" src="./assets/ctg1-D2Tt8YiL.webp"
+                                 /></a>
+                              <div _ngcontent-ttn-c9="" class="name-ctg text-center">
+                                 <h6 _ngcontent-ttn-c9="" class="mb-2">
+                                    Beaufille Collection
+                                 </h6>
+                                 <a
+                                    _ngcontent-ttn-c9=""
+                                    routerlink="/category/1"
+                                    class="text-light"
+                                    href="./pages/rings.html"
+                                    >Shop Rings Now</a
+                                    >
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div _ngcontent-ttn-c9="" class="center-top">
+                        <div _ngcontent-ttn-c9="" class="ctg-img-inner">
+                           <a _ngcontent-ttn-c9=""
+                              ><img _ngcontent-ttn-c9="" src="./assets/ctg2-nPIqdhC8.webp"
+                              /></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div _ngcontent-ttn-c9="" class="ctg-left-btm">
+                  <div _ngcontent-ttn-c9="" class="d-flex">
+                     <div _ngcontent-ttn-c9="" class="left-btm">
+                        <div _ngcontent-ttn-c9="" class="ctg-img-inner">
+                           <a _ngcontent-ttn-c9=""
+                              ><img _ngcontent-ttn-c9="" src="./assets/ctg4-r_b_kbws.webp"
+                              /></a>
+                        </div>
+                     </div>
+                     <div _ngcontent-ttn-c9="" class="center-btm">
+                        <div _ngcontent-ttn-c9="" class="ctg-img-inner">
+                           <div _ngcontent-ttn-c9="" class="image-ctg">
+                              <a _ngcontent-ttn-c9=""
+                                 ><img _ngcontent-ttn-c9="" src="./assets/ctg5-Ou68Ac3D.webp"
+                                 /></a>
+                              <div _ngcontent-ttn-c9="" class="name-ctg text-center">
+                                 <h6 _ngcontent-ttn-c9="" class="mb-2">
+                                    Beaufille Collection
+                                 </h6>
+                                 <a
+                                    _ngcontent-ttn-c9=""
+                                    routerlink="/category/1"
+                                    class="text-light"
+                                    href="./pages/necklaces.html"
+                                    >Shop Necklaces Now</a
+                                    >
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div _ngcontent-ttn-c9="" class="ctg-right col-4">
+               <div _ngcontent-ttn-c9="" class="right-top">
+                  <div _ngcontent-ttn-c9="" class="ctg-img-inner">
+                     <div _ngcontent-ttn-c9="" class="image-ctg">
+                        <a _ngcontent-ttn-c9=""
+                           ><img _ngcontent-ttn-c9="" src="./assets/ctg3-DCV1cN2G.webp"
+                           /></a>
+                        <div _ngcontent-ttn-c9="" class="name-ctg text-center">
+                           <h6 _ngcontent-ttn-c9="" class="mb-2">
+                              Beautiful Collection
+                           </h6>
+                           <a
+                              _ngcontent-ttn-c9=""
+                              class="text-light"
+                              href="./pages/earrings.html"
+                              >Shop Earrings Now</a
+                              >
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div _ngcontent-ttn-c9="" class="right-btm">
+                  <div _ngcontent-ttn-c9="" class="ctg-img-inner">
+                     <a _ngcontent-ttn-c9=""
+                        ><img _ngcontent-ttn-c9="" src="./assets/ctg6-COwAp-8l.webp"
+                        /></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- 2 New Arrivals + Aguri's Jewellery   -->
+      <div _ngcontent-ttn-c9="" class="container-fluid container">
+         <!-- 2 New Arrivals    -->
+         <div _ngcontent-ttn-c9="" class="simi-prod new-arrivals mbt-120">
+            <div _ngcontent-ttn-c9="" class="row">
+               <div _ngcontent-ttn-c9="" class="col-3">
+                  <h5 _ngcontent-ttn-c9="" class="mt-5">New Arrivals</h5>
+                  <p _ngcontent-ttn-c9="" class="mt-2 mb-4">
+                     We designs reinvent our iconic collection with bold profiles and
+                     powerful details.
+                  </p>
+                  <a
+                     _ngcontent-ttn-c9=""
+                     routerlink="/category/1"
+                     href="./pages/shop-all.html"
+                     >
+                     <p _ngcontent-ttn-c9="" class="shop-all-new">
+                        Shop all new items
+                     </p>
+                  </a
+                     >
+               </div>
+               <div _ngcontent-ttn-c9="" class="col-9">
+                  <div
+                     _ngcontent-ttn-c9=""
+                     id="newarrival"
+                     data-bs-ride="carousel"
+                     class="carousel slide carousel-fade"
+                     >
+                     <div _ngcontent-ttn-c9="" class="carousel-inner">
+                        <div
+                           _ngcontent-ttn-c9=""
+                           data-bs-interval="1300"
+                           class="carousel-item active"
+                           >
+                           <div _ngcontent-ttn-c9="" class="row">
+                              <div _ngcontent-ttn-c9="" class="col-4">
+                                 <div _ngcontent-ttn-c9="" class="item-card-info">
+                                    <div _ngcontent-ttn-c9="" class="card-prd">
+                                       <div _ngcontent-ttn-c9="" class="img">
+                                          <a
+                                             _ngcontent-ttn-c9=""
+                                             routerlink="/product-detail"
+                                             href="./pages/bracelets.html"
+                                             ><img
+                                             _ngcontent-ttn-c9=""
+                                             src="./assets/new1-BG811400.webp"
+                                             /></a>
+                                       </div>
+                                       <div
+                                          _ngcontent-ttn-c9=""
+                                          data-bs-toggle="modal"
+                                          type="button"
+                                          data-bs-target="#quickview"
+                                          class="compare card-prd-bt smt"
+                                          >
+                                          Quick view
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div _ngcontent-ttn-c9="" class="col-4">
+                                 <div _ngcontent-ttn-c9="" class="item-card-info">
+                                    <div _ngcontent-ttn-c9="" class="card-prd">
+                                       <div _ngcontent-ttn-c9="" class="img">
+                                          <a _ngcontent-ttn-c9="" routerlink="/product-detail"
+                                             ><img
+                                             _ngcontent-ttn-c9=""
+                                             src="./assets/new2-DusodhsV.webp"
+                                             /></a>
+                                       </div>
+                                       <div
+                                          _ngcontent-ttn-c9=""
+                                          data-bs-toggle="modal"
+                                          type="button"
+                                          data-bs-target="#quickview"
+                                          class="compare card-prd-bt smt"
+                                          >
+                                          Quick view
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div _ngcontent-ttn-c9="" class="col-4">
+                                 <div _ngcontent-ttn-c9="" class="item-card-info">
+                                    <div _ngcontent-ttn-c9="" class="card-prd">
+                                       <div _ngcontent-ttn-c9="" class="img">
+                                          <a
+                                             _ngcontent-ttn-c9=""
+                                             routerlink="/product-detail"
+                                             href="#/product-detail"
+                                             ><img
+                                             _ngcontent-ttn-c9=""
+                                             src="./assets/new3-DIQB1ou-.webp"
+                                             /></a>
+                                       </div>
+                                       <div
+                                          _ngcontent-ttn-c9=""
+                                          data-bs-toggle="modal"
+                                          type="button"
+                                          data-bs-target="#quickview"
+                                          class="compare card-prd-bt smt"
+                                          >
+                                          Quick view
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div
+                           _ngcontent-ttn-c9=""
+                           data-bs-interval="1300"
+                           class="carousel-item"
+                           >
+                           <div _ngcontent-ttn-c9="" class="row">
+                              <div _ngcontent-ttn-c9="" class="col-4">
+                                 <div _ngcontent-ttn-c9="" class="item-card-info">
+                                    <div _ngcontent-ttn-c9="" class="card-prd">
+                                       <div _ngcontent-ttn-c9="" class="img">
+                                          <a
+                                             _ngcontent-ttn-c9=""
+                                             routerlink="/product-detail"
+                                             href="#/product-detail"
+                                             ><img
+                                             _ngcontent-ttn-c9=""
+                                             src="./assets/new4-CTj9a2vS.webp"
+                                             /></a>
+                                       </div>
+                                       <div
+                                          _ngcontent-ttn-c9=""
+                                          data-bs-toggle="modal"
+                                          type="button"
+                                          data-bs-target="#quickview"
+                                          class="compare card-prd-bt smt"
+                                          >
+                                          Quick view
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div _ngcontent-ttn-c9="" class="col-4">
+                                 <div _ngcontent-ttn-c9="" class="item-card-info">
+                                    <div _ngcontent-ttn-c9="" class="card-prd">
+                                       <div _ngcontent-ttn-c9="" class="img">
+                                          <a
+                                             _ngcontent-ttn-c9=""
+                                             routerlink="/product-detail"
+                                             href="#/product-detail"
+                                             ><img
+                                             _ngcontent-ttn-c9=""
+                                             src="./assets/new5-DURBQbWG.webp"
+                                             /></a>
+                                       </div>
+                                       <div
+                                          _ngcontent-ttn-c9=""
+                                          data-bs-toggle="modal"
+                                          type="button"
+                                          data-bs-target="#quickview"
+                                          class="compare card-prd-bt smt"
+                                          >
+                                          Quick view
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div _ngcontent-ttn-c9="" class="col-4">
+                                 <div _ngcontent-ttn-c9="" class="item-card-info">
+                                    <div _ngcontent-ttn-c9="" class="card-prd">
+                                       <div _ngcontent-ttn-c9="" class="img">
+                                          <a
+                                             _ngcontent-ttn-c9=""
+                                             routerlink="/product-detail"
+                                             href="#/product-detail"
+                                             ><img
+                                             _ngcontent-ttn-c9=""
+                                             src="./assets/new6-CyY8ZHzf.webp"
+                                             /></a>
+                                       </div>
+                                       <div
+                                          _ngcontent-ttn-c9=""
+                                          data-bs-toggle="modal"
+                                          type="button"
+                                          data-bs-target="#quickview"
+                                          class="compare card-prd-bt smt"
+                                          >
+                                          Quick view
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--   Aguri's Jewellery   -->
+         <div _ngcontent-ttn-c9="" class="all-jewelery mbt-120">
+            <div _ngcontent-ttn-c9="" class="row mbt">
+               <div _ngcontent-ttn-c9="" class="col-4 all-top">
+                  <div _ngcontent-ttn-c9="" class="top-content">
+                     <h5 _ngcontent-ttn-c9="" class="mb-1">Aguri's Jewellery</h5>
+                     <p _ngcontent-ttn-c9="" class="smt mb-3">
+                        Forward-thinking fine jewelry essentials for individuals of all.
+                     </p>
+                  </div>
+                  <div _ngcontent-ttn-c9="" class="item-box-all">
+                     <div _ngcontent-ttn-c9="" class="item-box-img box-ring">
+                        <a
+                           _ngcontent-ttn-c9=""
+                           routerlink="/category/1"
+                           href="./pages/rings.html"
+                           ><img _ngcontent-ttn-c9="" src="./assets/all-j1-BuUx4P50.webp"
+                           /></a>
+                     </div>
+                     <div _ngcontent-ttn-c9="" class="item-box-content text-center">
+                        <a
+                           _ngcontent-ttn-c9=""
+                           routerlink="/category/1"
+                           href="./pages/rings.html"
+                           >
+                           <h5 _ngcontent-ttn-c9="">Rings</h5>
+                        </a
+                           >
+                     </div>
+                  </div>
+               </div>
+               <div _ngcontent-ttn-c9="" class="col-8">
+                  <div _ngcontent-ttn-c9="" class="item-box-all">
+                     <div _ngcontent-ttn-c9="" class="item-box-img">
+                        <a
+                           _ngcontent-ttn-c9=""
+                           routerlink="/category/1"
+                           href="./pages/necklaces.html"
+                           ><img _ngcontent-ttn-c9="" src="./assets/all-j2-Bar-Ttlr.webp"
+                           /></a>
+                     </div>
+                     <div _ngcontent-ttn-c9="" class="item-box-content text-center">
+                        <a
+                           _ngcontent-ttn-c9=""
+                           routerlink="#"
+                           href="./pages/necklaces.html"
+                           >
+                           <h5 _ngcontent-ttn-c9="">Necklaces</h5>
+                        </a
+                           >
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div _ngcontent-ttn-c9="" class="row all-bottom">
+               <div _ngcontent-ttn-c9="" class="col-4 bottom-content">
+                  <div _ngcontent-ttn-c9="" class="bottom-content-inner">
+                     <p _ngcontent-ttn-c9="" class="text-right decor-text mb-0">
+                        Forward-thinking fine jewelry essentials for individuals of all
+                        genders that breathe new life into classic silhouettes.
+                     </p>
+                  </div>
+               </div>
+               <div _ngcontent-ttn-c9="" class="col-4">
+                  <div _ngcontent-ttn-c9="" class="item-box-all">
+                     <div _ngcontent-ttn-c9="" class="item-box-img">
+                        <a
+                           _ngcontent-ttn-c9=""
+                           routerlink="/category/1"
+                           href="./pages/earrings.html"
+                           ><img _ngcontent-ttn-c9="" src="./assets/all-j3-BeqADlHh.webp"
+                           /></a>
+                     </div>
+                     <div _ngcontent-ttn-c9="" class="item-box-content text-center">
+                        <a
+                           _ngcontent-ttn-c9=""
+                           routerlink="#"
+                           href="./pages/earrings.html"
+                           >
+                           <h5 _ngcontent-ttn-c9="">Earrings</h5>
+                        </a
+                           >
+                     </div>
+                  </div>
+               </div>
+               <div _ngcontent-ttn-c9="" class="col-4">
+                  <div _ngcontent-ttn-c9="" class="item-box-all">
+                     <div _ngcontent-ttn-c9="" class="item-box-img">
+                        <a
+                           _ngcontent-ttn-c9=""
+                           routerlink="/category/1"
+                           href="./pages/bracelets.html"
+                           ><img _ngcontent-ttn-c9="" src="./assets/all-j4-i7xpfvxs.webp"
+                           /></a>
+                     </div>
+                     <div _ngcontent-ttn-c9="" class="item-box-content text-center">
+                        <a
+                           _ngcontent-ttn-c9=""
+                           routerlink="#"
+                           href="./pages/bracelets.html"
+                           >
+                           <h5 _ngcontent-ttn-c9="">Bracelets</h5>
+                        </a
+                           >
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- 3 -->
+      <div _ngcontent-ttn-c9="" class="change-bg">
+         <div _ngcontent-ttn-c9="" class="also-like best-seller mbt-120">
+            <h5 _ngcontent-ttn-c9="" class="text-center mb-4">Best Sellers</h5>
+            <div
+               _ngcontent-ttn-c9=""
+               id="carouselalsolike"
+               data-bs-ride="carousel"
+               class="carousel slide carousel-dark carousel-also carousel-fade"
+               >
+               <div _ngcontent-ttn-c9="" class="carousel-inner container-fluid">
+                  <div
+                     _ngcontent-ttn-c9=""
+                     data-bs-interval="4000"
+                     class="carousel-item active"
+                     >
+                     <div _ngcontent-ttn-c9="" class="row">
+                        <div _ngcontent-ttn-c9="" class="col-3">
+                           <div _ngcontent-ttn-c9="" class="item-card-info">
+                              <div _ngcontent-ttn-c9="" class="card-prd">
+                                 <div _ngcontent-ttn-c9="" class="img">
+                                    <a _ngcontent-ttn-c9="" href="#"
+                                       ><img
+                                       _ngcontent-ttn-c9=""
+                                       src="./assets/also-like1-D13IRXhJ.webp"
+                                       /></a>
+                                 </div>
+                                 <div
+                                    _ngcontent-ttn-c9=""
+                                    data-bs-toggle="modal"
+                                    type="button"
+                                    data-bs-target="#quickview"
+                                    class="compare card-prd-bt smt"
+                                    >
+                                    Quick view
+                                 </div>
+                              </div>
+                              <div _ngcontent-ttn-c9="" class="item-inf text-center mt-3">
+                                 <p _ngcontent-ttn-c9="" class="mdt mb-2">Lynn Ring</p>
+                                 <p _ngcontent-ttn-c9="">$7,000</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div _ngcontent-ttn-c9="" class="col-3">
+                           <div _ngcontent-ttn-c9="" class="item-card-info">
+                              <div _ngcontent-ttn-c9="" class="card-prd">
+                                 <div _ngcontent-ttn-c9="" class="img">
+                                    <a _ngcontent-ttn-c9="" href="#"
+                                       ><img
+                                       _ngcontent-ttn-c9=""
+                                       src="./assets/also-like2-DfcuOb3E.webp"
+                                       /></a>
+                                 </div>
+                                 <div
+                                    _ngcontent-ttn-c9=""
+                                    data-bs-toggle="modal"
+                                    type="button"
+                                    data-bs-target="#quickview"
+                                    class="compare card-prd-bt smt"
+                                    >
+                                    Quick view
+                                 </div>
+                              </div>
+                              <div _ngcontent-ttn-c9="" class="item-inf text-center mt-3">
+                                 <p _ngcontent-ttn-c9="" class="mdt mb-2">Lynn Ring</p>
+                                 <p _ngcontent-ttn-c9="">$7,000</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div _ngcontent-ttn-c9="" class="col-3">
+                           <div _ngcontent-ttn-c9="" class="item-card-info">
+                              <div _ngcontent-ttn-c9="" class="card-prd">
+                                 <div _ngcontent-ttn-c9="" class="img">
+                                    <a _ngcontent-ttn-c9="" href="#"
+                                       ><img
+                                       _ngcontent-ttn-c9=""
+                                       src="./assets/also-like3-CHrCqolK.webp"
+                                       /></a>
+                                 </div>
+                                 <div
+                                    _ngcontent-ttn-c9=""
+                                    data-bs-toggle="modal"
+                                    type="button"
+                                    data-bs-target="#quickview"
+                                    class="compare card-prd-bt smt"
+                                    >
+                                    Quick view
+                                 </div>
+                              </div>
+                              <div _ngcontent-ttn-c9="" class="item-inf text-center mt-3">
+                                 <p _ngcontent-ttn-c9="" class="mdt mb-2">Lynn Ring</p>
+                                 <p _ngcontent-ttn-c9="">$7,000</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div _ngcontent-ttn-c9="" class="col-3">
+                           <div _ngcontent-ttn-c9="" class="item-card-info">
+                              <div _ngcontent-ttn-c9="" class="card-prd">
+                                 <div _ngcontent-ttn-c9="" class="img">
+                                    <a _ngcontent-ttn-c9="" href="#"
+                                       ><img
+                                       _ngcontent-ttn-c9=""
+                                       src="./assets/also-like4-JvAw2Sjc.webp"
+                                       /></a>
+                                 </div>
+                                 <div
+                                    _ngcontent-ttn-c9=""
+                                    data-bs-toggle="modal"
+                                    type="button"
+                                    data-bs-target="#quickview"
+                                    class="compare card-prd-bt smt"
+                                    >
+                                    Quick view
+                                 </div>
+                              </div>
+                              <div _ngcontent-ttn-c9="" class="item-inf text-center mt-3">
+                                 <p _ngcontent-ttn-c9="" class="mdt mb-2">Lynn Ring</p>
+                                 <p _ngcontent-ttn-c9="">$7,000</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div
+                     _ngcontent-ttn-c9=""
+                     data-bs-interval="3000"
+                     class="carousel-item"
+                     >
+                     <div _ngcontent-ttn-c9="" class="row">
+                        <div _ngcontent-ttn-c9="" class="col-3">
+                           <div _ngcontent-ttn-c9="" class="item-card-info">
+                              <div _ngcontent-ttn-c9="" class="card-prd">
+                                 <div _ngcontent-ttn-c9="" class="img">
+                                    <a _ngcontent-ttn-c9="" href="#"
+                                       ><img
+                                       _ngcontent-ttn-c9=""
+                                       src="./assets/also-like5-BckWo8ob.webp"
+                                       /></a>
+                                 </div>
+                                 <div
+                                    _ngcontent-ttn-c9=""
+                                    data-bs-toggle="modal"
+                                    type="button"
+                                    data-bs-target="#quickview"
+                                    class="compare card-prd-bt smt"
+                                    >
+                                    Quick view
+                                 </div>
+                              </div>
+                              <div _ngcontent-ttn-c9="" class="item-inf text-center mt-3">
+                                 <p _ngcontent-ttn-c9="" class="mdt mb-2">Lynn Ring</p>
+                                 <p _ngcontent-ttn-c9="">$7,000</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div _ngcontent-ttn-c9="" class="col-3">
+                           <div _ngcontent-ttn-c9="" class="item-card-info">
+                              <div _ngcontent-ttn-c9="" class="card-prd">
+                                 <div _ngcontent-ttn-c9="" class="img">
+                                    <a _ngcontent-ttn-c9="" href="#"
+                                       ><img
+                                       _ngcontent-ttn-c9=""
+                                       src="./assets/also-like6-Cx2_XSOj.webp"
+                                       /></a>
+                                 </div>
+                                 <div
+                                    _ngcontent-ttn-c9=""
+                                    data-bs-toggle="modal"
+                                    type="button"
+                                    data-bs-target="#quickview"
+                                    class="compare card-prd-bt smt"
+                                    >
+                                    Quick view
+                                 </div>
+                              </div>
+                              <div _ngcontent-ttn-c9="" class="item-inf text-center mt-3">
+                                 <p _ngcontent-ttn-c9="" class="mdt mb-2">Lynn Ring</p>
+                                 <p _ngcontent-ttn-c9="">$7,000</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div _ngcontent-ttn-c9="" class="col-3">
+                           <div _ngcontent-ttn-c9="" class="item-card-info">
+                              <div _ngcontent-ttn-c9="" class="card-prd">
+                                 <div _ngcontent-ttn-c9="" class="img">
+                                    <a _ngcontent-ttn-c9="" href="#"
+                                       ><img
+                                       _ngcontent-ttn-c9=""
+                                       src="./assets/also-like7-9StVhvrB.webp"
+                                       /></a>
+                                 </div>
+                                 <div
+                                    _ngcontent-ttn-c9=""
+                                    data-bs-toggle="modal"
+                                    type="button"
+                                    data-bs-target="#quickview"
+                                    class="compare card-prd-bt smt"
+                                    >
+                                    Quick view
+                                 </div>
+                              </div>
+                              <div _ngcontent-ttn-c9="" class="item-inf text-center mt-3">
+                                 <p _ngcontent-ttn-c9="" class="mdt mb-2">Lynn Ring</p>
+                                 <p _ngcontent-ttn-c9="">$7,000</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div _ngcontent-ttn-c9="" class="col-3">
+                           <div _ngcontent-ttn-c9="" class="item-card-info">
+                              <div _ngcontent-ttn-c9="" class="card-prd">
+                                 <div _ngcontent-ttn-c9="" class="img">
+                                    <a _ngcontent-ttn-c9="" href="#"
+                                       ><img
+                                       _ngcontent-ttn-c9=""
+                                       src="./assets/also-like8-CoSl9kl2.webp"
+                                       /></a>
+                                 </div>
+                                 <div
+                                    _ngcontent-ttn-c9=""
+                                    data-bs-toggle="modal"
+                                    type="button"
+                                    data-bs-target="#quickview"
+                                    class="compare card-prd-bt smt"
+                                    >
+                                    Quick view
+                                 </div>
+                              </div>
+                              <div _ngcontent-ttn-c9="" class="item-inf text-center mt-3">
+                                 <p _ngcontent-ttn-c9="" class="mdt mb-2">Lynn Ring</p>
+                                 <p _ngcontent-ttn-c9="">$7,000</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div
+                     _ngcontent-ttn-c9=""
+                     data-bs-interval="5000"
+                     class="carousel-item"
+                     >
+                     <div _ngcontent-ttn-c9="" class="row">
+                        <div _ngcontent-ttn-c9="" class="col-3">
+                           <div _ngcontent-ttn-c9="" class="item-card-info">
+                              <div _ngcontent-ttn-c9="" class="card-prd">
+                                 <div _ngcontent-ttn-c9="" class="img">
+                                    <a _ngcontent-ttn-c9="" href="#"
+                                       ><img
+                                       _ngcontent-ttn-c9=""
+                                       src="./assets/also-like5-BckWo8ob.webp"
+                                       /></a>
+                                 </div>
+                                 <div
+                                    _ngcontent-ttn-c9=""
+                                    data-bs-toggle="modal"
+                                    type="button"
+                                    data-bs-target="#quickview"
+                                    class="compare card-prd-bt smt"
+                                    >
+                                    Quick view
+                                 </div>
+                              </div>
+                              <div _ngcontent-ttn-c9="" class="item-inf text-center mt-3">
+                                 <p _ngcontent-ttn-c9="" class="mdt mb-2">Lynn Ring</p>
+                                 <p _ngcontent-ttn-c9="" class="smt">$7,000</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div _ngcontent-ttn-c9="" class="col-3">
+                           <div _ngcontent-ttn-c9="" class="item-card-info">
+                              <div _ngcontent-ttn-c9="" class="card-prd">
+                                 <div _ngcontent-ttn-c9="" class="img">
+                                    <a _ngcontent-ttn-c9="" href="#"
+                                       ><img
+                                       _ngcontent-ttn-c9=""
+                                       src="./assets/also-like6-Cx2_XSOj.webp"
+                                       /></a>
+                                 </div>
+                                 <div
+                                    _ngcontent-ttn-c9=""
+                                    data-bs-toggle="modal"
+                                    type="button"
+                                    data-bs-target="#quickview"
+                                    class="compare card-prd-bt smt"
+                                    >
+                                    Quick view
+                                 </div>
+                              </div>
+                              <div _ngcontent-ttn-c9="" class="item-inf text-center mt-3">
+                                 <p _ngcontent-ttn-c9="" class="mdt mb-2">Lynn Ring</p>
+                                 <p _ngcontent-ttn-c9="" class="smt">$7,000</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div _ngcontent-ttn-c9="" class="col-3">
+                           <div _ngcontent-ttn-c9="" class="item-card-info">
+                              <div _ngcontent-ttn-c9="" class="card-prd">
+                                 <div _ngcontent-ttn-c9="" class="img">
+                                    <a _ngcontent-ttn-c9="" href="#"
+                                       ><img
+                                       _ngcontent-ttn-c9=""
+                                       src="./assets/also-like7-9StVhvrB.webp"
+                                       /></a>
+                                 </div>
+                                 <div
+                                    _ngcontent-ttn-c9=""
+                                    data-bs-toggle="modal"
+                                    type="button"
+                                    data-bs-target="#quickview"
+                                    class="compare card-prd-bt smt"
+                                    >
+                                    Quick view
+                                 </div>
+                              </div>
+                              <div _ngcontent-ttn-c9="" class="item-inf text-center mt-3">
+                                 <p _ngcontent-ttn-c9="" class="mdt mb-2">Lynn Ring</p>
+                                 <p _ngcontent-ttn-c9="" class="smt">$7,000</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div _ngcontent-ttn-c9="" class="col-3">
+                           <div _ngcontent-ttn-c9="" class="item-card-info">
+                              <div _ngcontent-ttn-c9="" class="card-prd">
+                                 <div _ngcontent-ttn-c9="" class="img">
+                                    <a _ngcontent-ttn-c9="" href="#"
+                                       ><img
+                                       _ngcontent-ttn-c9=""
+                                       src="./assets/also-like8-CoSl9kl2.webp"
+                                       /></a>
+                                 </div>
+                                 <div
+                                    _ngcontent-ttn-c9=""
+                                    data-bs-toggle="modal"
+                                    type="button"
+                                    data-bs-target="#quickview"
+                                    class="compare card-prd-bt smt"
+                                    >
+                                    Quick view
+                                 </div>
+                              </div>
+                              <div _ngcontent-ttn-c9="" class="item-inf text-center mt-3">
+                                 <p _ngcontent-ttn-c9="" class="mdt mb-2">Lynn Ring</p>
+                                 <p _ngcontent-ttn-c9="" class="smt">$7,000</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <button
+                  _ngcontent-ttn-c9=""
+                  type="button"
+                  data-bs-target="#carouselalsolike"
+                  data-bs-slide="prev"
+                  class="carousel-control-prev"
+                  >
+               <span
+                  _ngcontent-ttn-c9=""
+                  aria-hidden="true"
+                  class="carousel-control-prev-icon"
+                  ></span
+                  ><span _ngcontent-ttn-c9="" class="visually-hidden"
+                  >Previous</span
+                  ></button
+                  ><button
+                  _ngcontent-ttn-c9=""
+                  type="button"
+                  data-bs-target="#carouselalsolike"
+                  data-bs-slide="next"
+                  class="carousel-control-next"
+                  >
+               <span
+                  _ngcontent-ttn-c9=""
+                  aria-hidden="true"
+                  class="carousel-control-next-icon"
+                  ></span
+                  ><span _ngcontent-ttn-c9="" class="visually-hidden">Next</span>
+               </button>
+            </div>
+         </div>
+         <div _ngcontent-ttn-c9="" class="about row mbt-120">
+            <div _ngcontent-ttn-c9="" class="col-2"></div>
+            <div _ngcontent-ttn-c9="" class="col-8 text-center">
+               <h4 _ngcontent-ttn-c9="" class="mb-3">We Are More Than Jewels</h4>
+               <p _ngcontent-ttn-c9="" class="smt mt-40 mb-5">
+                  Aguri is a fine jewelry destination for memorable pieces designed
+                  and crafted in New York City. Our carefully considered selection of
+                  rings, necklaces, earrings and bracelets honors mindful production
+                  and genuine materials.
+               </p>
+               <button
+                  _ngcontent-ttn-c9=""
+                  routerlink="/about-us"
+                  class="btn btnlg btn-pri"
+                  tabindex="0"
+                  href="./pages/about-us.html"
+                  >
+               More about us
+               </button>
+            </div>
+            <div _ngcontent-ttn-c9="" class="col-2"></div>
+         </div>
+      </div>
+      <!-- 4 -->
+      <div _ngcontent-ttn-c9="" class="aguri-collection container">
+         <div _ngcontent-ttn-c9="" class="new-collection mbt-120 container-fluid">
+            <div _ngcontent-ttn-c9="" class="row">
+               <div _ngcontent-ttn-c9="" class="col-5 new-collection-left ps-0">
+                  <a _ngcontent-ttn-c9="" routerlink="#"
+                     ><img _ngcontent-ttn-c9="" src="./assets/feature1-Bu-nFMaz.png"
+                     /></a>
+               </div>
+               <div _ngcontent-ttn-c9="" class="col"></div>
+               <div _ngcontent-ttn-c9="" class="col-6 new-collection-right pe-0">
+                  <div _ngcontent-ttn-c9="" class="row new-collection-top">
+                     <div
+                        _ngcontent-ttn-c9=""
+                        class="col-6 feature-img2 ps-0 new-collection-img"
+                        >
+                        <div _ngcontent-ttn-c9="" class="collection-img">
+                           <a _ngcontent-ttn-c9="" routerlink="#"
+                              ><img
+                              _ngcontent-ttn-c9=""
+                              src="./assets/feature2-DguBn93o.png"
+                              /></a>
+                        </div>
+                     </div>
+                     <div _ngcontent-ttn-c9="" class="col-6 pe-0 new-collection-img">
+                        <div _ngcontent-ttn-c9="" class="collection-img">
+                           <a _ngcontent-ttn-c9="" routerlink="#"
+                              ><img
+                              _ngcontent-ttn-c9=""
+                              src="./assets/feature3-B_NAJHPP.png"
+                              /></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div _ngcontent-ttn-c9="" class="new-collection-bottom">
+                     <div
+                        _ngcontent-ttn-c9=""
+                        class="text-center new-collection-content"
+                        >
+                        <p _ngcontent-ttn-c9="" class="mdt mb-1">Less is more</p>
+                        <h5 _ngcontent-ttn-c9="" class="mb-2">
+                           Embody the beauty of impermanence
+                        </h5>
+                        <p _ngcontent-ttn-c9="" class="smt mb-4">
+                           Forward-thinking fine jewelry essentials for individuals of
+                           all genders that breathe new life into classic silhouettes.
+                        </p>
+                        <button
+                           _ngcontent-ttn-c9=""
+                           type="button"
+                           class="btn btnlg btn-pri"
+                           >
+                        Shop now
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- 5 -->
+      <div _ngcontent-ttn-c9="" class="experiences mbt-120 container">
+         <div _ngcontent-ttn-c9="" class="container-fluid">
+            <h4 _ngcontent-ttn-c9="" class="text-center mb-5">
+               The Aguri Experience
+            </h4>
+            <div _ngcontent-ttn-c9="" class="row">
+               <div
+                  _ngcontent-ttn-c9=""
+                  class="col-4 text-center ps-0 experience-user"
+                  >
+                  <div _ngcontent-ttn-c9="" class="px-4 experience-inner">
+                     <i _ngcontent-ttn-c9="" class="fa-regular fa-truck fa-2x"></i>
+                     <p _ngcontent-ttn-c9="" class="mdt mb-0 mt-3 mb-2">
+                        Complimentary Shipping &amp; Returns
+                     </p>
+                     <p _ngcontent-ttn-c9="" class="smt">
+                        We offer complimentary shipping and returns on all AGURI’s order
+                     </p>
+                     <a
+                        _ngcontent-ttn-c9=""
+                        routerlink="#"
+                        class="decor-text"
+                        href="#/%23"
+                        >Learn more
+                     <i _ngcontent-ttn-c9="" class="fa-solid fa-arrow-right"></i
+                        ></a>
+                  </div>
+               </div>
+               <div _ngcontent-ttn-c9="" class="col-4 text-center">
+                  <div _ngcontent-ttn-c9="" class="px-4">
+                     <i _ngcontent-ttn-c9="" class="fa-regular fa-calendar fa-2x"></i>
+                     <p _ngcontent-ttn-c9="" class="mdt mb-0 mt-3 mb-2">
+                        Complimentary Shipping &amp; Returns
+                     </p>
+                     <p _ngcontent-ttn-c9="" class="smt">
+                        We offer complimentary shipping and returns on all AGURI’s order
+                     </p>
+                     <a
+                        _ngcontent-ttn-c9=""
+                        routerlink="#"
+                        class="decor-text"
+                        href="#/%23"
+                        >Book now
+                     <i _ngcontent-ttn-c9="" class="fa-solid fa-arrow-right"></i
+                        ></a>
+                  </div>
+               </div>
+               <div _ngcontent-ttn-c9="" class="col-4 text-center pe-0">
+                  <div _ngcontent-ttn-c9="" class="px-4">
+                     <i _ngcontent-ttn-c9="" class="fa-regular fa-gift fa-2x"></i>
+                     <p _ngcontent-ttn-c9="" class="mdt mb-0 mt-3 mb-2">
+                        Complimentary Shipping &amp; Returns
+                     </p>
+                     <p _ngcontent-ttn-c9="" class="smt">
+                        We offer complimentary shipping and returns on all AGURI’s order
+                     </p>
+                     <a
+                        _ngcontent-ttn-c9=""
+                        routerlink="#"
+                        class="decor-text"
+                        href="#/%23"
+                        >Explore gift
+                     <i _ngcontent-ttn-c9="" class="fa-solid fa-arrow-right"></i
+                        ></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- 6 -->
+      <div
+         _ngcontent-ttn-c9=""
+         class="container-fluid showroom mbt-120 container"
+         >
+         <div _ngcontent-ttn-c9="" class="row">
+            <div _ngcontent-ttn-c9="" class="col-3 ps-0">
+               <h5 _ngcontent-ttn-c9="" class="mb-3">Our Showrooms</h5>
+               <p _ngcontent-ttn-c9="" class="smt mb-1">
+                  <i _ngcontent-ttn-c9="" class="fas fa-map-marker-alt"></i>
+                  6901 Hollywood Blvd, LA, CA 90028, US
+               </p>
+               <p _ngcontent-ttn-c9="" class="smt">
+                  <i _ngcontent-ttn-c9="" class="fas fa-map-marker-alt"></i>
+                  10 NorthumbeCartrland St, LD WC2N5DB, UK
+               </p>
+               <p _ngcontent-ttn-c9="" class="smt mt-3">
+                  Email info@AGURI&amp;PIJ2022.com for appointment
+               </p>
+            </div>
+            <div _ngcontent-ttn-c9="" class="col-2 showroom bottom-content">
+               <div _ngcontent-ttn-c9="" class="bottom-content-inner">
+                  <p _ngcontent-ttn-c9="" class="text-right decor-text mb-0">
+                     We’re happy to help with in-store or virtual appointments
+                  </p>
+               </div>
+            </div>
+            <div _ngcontent-ttn-c9="" class="col-7 pe-0">
+               <div
+                  _ngcontent-ttn-c9=""
+                  id="carouselshowroom"
+                  data-bs-ride="carousel"
+                  class="carousel slide carousel-fade"
+                  >
+                  <div _ngcontent-ttn-c9="" class="carousel-indicators">
+                     <button
+                        _ngcontent-ttn-c9=""
+                        type="button"
+                        data-bs-target="#carouselshowroom"
+                        data-bs-slide-to="0"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                        class="active"
+                        ></button
+                        ><button
+                        _ngcontent-ttn-c9=""
+                        type="button"
+                        data-bs-target="#carouselshowroom"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                        ></button
+                        ><button
+                        _ngcontent-ttn-c9=""
+                        type="button"
+                        data-bs-target="#carouselshowroom"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                        ></button>
+                  </div>
+                  <div _ngcontent-ttn-c9="" class="carousel-inner">
+                     <div
+                        _ngcontent-ttn-c9=""
+                        data-bs-interval="1000"
+                        class="carousel-item active"
+                        >
+                        <img _ngcontent-ttn-c9="" src="./assets/showroom1-B41Bufrd.webp" />
+                     </div>
+                     <div
+                        _ngcontent-ttn-c9=""
+                        data-bs-interval="1000"
+                        class="carousel-item"
+                        >
+                        <img _ngcontent-ttn-c9="" src="./assets/showroom2-BZjSp-PV.webp" />
+                     </div>
+                     <div
+                        _ngcontent-ttn-c9=""
+                        data-bs-interval="1000"
+                        class="carousel-item"
+                        >
+                        <img _ngcontent-ttn-c9="" src="./assets/showroom3-VhM2nRy3.webp" />
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- 7 -->
+      <div _ngcontent-ttn-c9="" class="inspiration mbt-120 container">
+         <h5 _ngcontent-ttn-c9="" class="mb-2 text-center">Get Inspiration</h5>
+         <p _ngcontent-ttn-c9="" class="smt mb-4 text-center">
+            Tag us on your insta to get a chance for a feature
+         </p>
+         <div
+            _ngcontent-ttn-c9=""
+            id="inspiration-carousel"
+            data-bs-ride="carousel"
+            class="carousel slide carousel-fade carousel-dark"
+            >
+            <div _ngcontent-ttn-c9="" class="carousel-inner container-fluid">
+               <div
+                  _ngcontent-ttn-c9=""
+                  data-bs-interval="2000"
+                  class="carousel-item active"
+                  >
+                  <div _ngcontent-ttn-c9="" class="row">
+                     <div _ngcontent-ttn-c9="" class="col-3 px-0">
+                        <img _ngcontent-ttn-c9="" src="./assets/follow1-s0EmpALy.webp" />
+                     </div>
+                     <div _ngcontent-ttn-c9="" class="col-3 px-0">
+                        <img _ngcontent-ttn-c9="" src="./assets/follow2-m3785C7n.webp" />
+                     </div>
+                     <div _ngcontent-ttn-c9="" class="col-3 px-0">
+                        <img _ngcontent-ttn-c9="" src="./assets/follow3-BfhWzfHQ.webp" />
+                     </div>
+                     <div _ngcontent-ttn-c9="" class="col-3 px-0">
+                        <img _ngcontent-ttn-c9="" src="./assets/follow4-ecWU3jYG.webp" />
+                     </div>
+                  </div>
+               </div>
+               <div
+                  _ngcontent-ttn-c9=""
+                  data-bs-interval="2000"
+                  class="carousel-item"
+                  >
+                  <div _ngcontent-ttn-c9="" class="row">
+                     <div _ngcontent-ttn-c9="" class="col-3 px-0">
+                        <img _ngcontent-ttn-c9="" src="./assets/follow5-D41o0mMy.webp" />
+                     </div>
+                     <div _ngcontent-ttn-c9="" class="col-3 px-0">
+                        <img _ngcontent-ttn-c9="" src="./assets/follow6-C7i3mDll.webp" />
+                     </div>
+                     <div _ngcontent-ttn-c9="" class="col-3 px-0">
+                        <img _ngcontent-ttn-c9="" src="./assets/follow7-DyT3qRic.webp" />
+                     </div>
+                     <div _ngcontent-ttn-c9="" class="col-3 px-0">
+                        <img _ngcontent-ttn-c9="" src="./assets/follow8-DrWTQKzN.webp" />
+                     </div>
+                  </div>
+               </div>
+               <div
+                  _ngcontent-ttn-c9=""
+                  data-bs-interval="2000"
+                  class="carousel-item"
+                  >
+                  <div _ngcontent-ttn-c9="" class="row">
+                     <div _ngcontent-ttn-c9="" class="col-3 px-0">
+                        <img _ngcontent-ttn-c9="" src="./assets/follow9-d1CTz6Nv.webp" />
+                     </div>
+                     <div _ngcontent-ttn-c9="" class="col-3 px-0">
+                        <img _ngcontent-ttn-c9="" src="./assets/follow10-CUbVLAsS.webp" />
+                     </div>
+                     <div _ngcontent-ttn-c9="" class="col-3 px-0">
+                        <img _ngcontent-ttn-c9="" src="data:image/webp;base64,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" />
+                     </div>
+                     <div _ngcontent-ttn-c9="" class="col-3 px-0">
+                        <img _ngcontent-ttn-c9="" src="./assets/follow12-D92YUpBK.webp" />
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- FOOTER -->
+      <footer>
+         <!-- <div class="border-bottom-0 border-left-0 border-right-0"> -->
+         <div class="card-footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-2">
+                     <ul>
+                        <li>
+                           <p class="mdt" style="text-transform: uppercase">Jewellery</p>
+                        </li>
+                        <li class="mb-2"><a href="../rings.html">Rings</a></li>
+                        <li class="mb-2"><a href="../earrings.html">Earrings</a></li>
+                        <li class="mb-2"><a href="../bracelets.html">Bracelets</a></li>
+                        <li class="mb-2"><a href="../necklaces.html">Necklaces</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-2">
+                     <ul>
+                        <li>
+                           <p class="mdt" style="text-transform: uppercase">More</p>
+                        </li>
+                        <li class="mb-2"><a href="">Size guide</a></li>
+                        <li class="mb-2"><a href="/return">Shipping & Returns</a></li>
+                        <li class="mb-2"><a href="">Product care & Repair</a></li>
+                        <li class="mb-2">
+                           <a href="../contact-us.html">Contact us</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-4"></div>
+                  <div class="col-4 subscribe-form">
+                     <p class="mdt" style="text-transform: uppercase">
+                        Subscribe to all things Aguri
+                     </p>
+                     <form
+                        ngNativeValidate
+                        class="subscribe"
+                        onsubmit="alert('Thank you!! Your submission has been sent.')"
+                        >
+                        <div>
+                           <!-- <label class="smt">Email address</label> -->
+                           <input
+                              placeholder="Email address"
+                              name="standalone"
+                              class="inpu col-12 border-top-0 border-left-0 border-right-0"
+                              type="email"
+                              style="background-color: #e1dcd6"
+                              required
+                              />
+                        </div>
+                        <button
+                           class="btn btnsm btn-pri"
+                           type="submit"
+                           style="text-transform: uppercase"
+                           >
+                        Join now
+                        </button>
+                     </form>
+                  </div>
+                  <!--copy-right-->
+                  <!-- <div class="copy-right text-center">
+                     <p class="smt">© 2024 AGURI.UIT IE106.E11.CN1</p>
+                     </div> -->
+                  <hr class="my-4" />
+               </div>
+               <div class="row">
+                  <!-- Left Aligned Items -->
+                  <div class="col-2">
+                     <a>Privacy policy</a>
+                  </div>
+                  <div class="col-2">
+                     <a>Terms & Conditions</a>
+                  </div>
+                  <div class="col-4 justify-content-center text-center copy-right">
+                     &copy;2024 AGURI.UIT IE106.E11.CN1
+                  </div>
+                  <!-- Right Aligned Items -->
+                  <div class="col-4 d-flex justify-content-end">
+                     <div class="me-3 text-decoration-underline"><a>Facebook</a></div>
+                     <div class="me-3 text-decoration-underline"><a>Instagram</a></div>
+                     <div class="text-decoration-underline"><a>Pinterest</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <script>
+         fetch('/pages/components/navbar-component.html')
+           .then((response) => response.text())
+           .then((content) => {
+             document.getElementById('navbar').innerHTML = content
+           })
+      </script>
+   </body>
+</html>
