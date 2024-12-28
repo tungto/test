@@ -18,7 +18,7 @@ images.forEach((image, index) => {
 	const productHTML = `
         <div class="col-md-3">
             <a class="card" href='../test/pages/product-detail.html' >
-                <img src="/images/rings/${image}" class="card-img-top" alt="Product Image">
+                <img src="/test/images/rings/${image}" class="card-img-top" alt="Product Image">
                 <div class="card-body text-center">
                     <h6 class="card-title">${
 						index % 2 === 0
